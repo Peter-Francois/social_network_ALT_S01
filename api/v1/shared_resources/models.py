@@ -10,7 +10,7 @@ class SharedResource(models.Model):
     size = models.PositiveIntegerField()
     is_public = models.BooleanField(default=False)
     creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name='shared_resources')
-    # parent resource for folders and files
+    # Clé étrangère vers le même modèle (pour les dossiers et fichiers)
     parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='children')
     metadata = models.JSONField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
