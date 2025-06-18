@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'api.v1.comments.apps.CommentsConfig',
     'api.v1.publications.apps.PublicationsConfig',
     'api.v1.messaging.apps.MessagingConfig',
-
 ]
 
 MIDDLEWARE = [
