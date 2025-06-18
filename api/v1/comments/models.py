@@ -20,7 +20,9 @@ class Comment(models.Model):
         related_name="comments"
     )
 
+    # auto_now_add ajoute la date et l'heure lors de la création et n'est pas modifiable
     created_at = models.DateTimeField(auto_now_add=True)
+    # auto_now ajoute la date et l'heure lors de la modification et est modifiable
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
