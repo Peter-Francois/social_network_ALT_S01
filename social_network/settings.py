@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'api.v1.users.apps.UsersConfig',
     'api.v1.events.apps.EventsConfig',
     'api.v1.notifications.apps.NotificationsConfig',
-    'api.v1.groups.apps.GroupsConfig',
     'api.v1.user_groups.apps.UserGroupsConfig',
     'api.v1.group_members.apps.GroupMembersConfig',
     'api.v1.friendships.apps.FriendshipsConfig',
