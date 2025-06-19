@@ -2,11 +2,16 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 
-def manage_resources(request):
-    return render(request, 'core/manage_resources.html')
+def index(request):
+    return render(request, 'index.html', {
+        "initial_partial": "partials/manage_resources.html"
+    })
 
-def manage_events(request):
-    return render(request, 'core/manage_events.html')
+def manage_resources_partial(request):
+    return render(request, 'partials/manage_resources.html')
 
-def notifications(request):
-    return render(request, 'core/notifications.html')
+def manage_events_partial(request):
+    return render(request, 'partials/manage_events.html')
+
+def notifications_partial(request):
+    return render(request, 'partials/notifications.html')

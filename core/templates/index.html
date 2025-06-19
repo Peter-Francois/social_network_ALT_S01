@@ -11,12 +11,14 @@
         <div id="root">
             <div class="min-h-screen bg-gray-50">
                 {% include 'components/navbar.html' %}
-                {% block content %}
-                {% endblock %}
+                <main id="main-content">
+                    {% include initial_partial %}
+                </main>
             </div>
         </div>
         <div class="ue-sidebar-container">
             <iframe srcdoc="<!DOCTYPE html><html><head></head><body><div class=&quot;frame-root&quot;></div></body></html>"></iframe>
         </div>
     </body>
+    <script src="{% static 'JS/base/script.js' %}"></script>
 </html>
