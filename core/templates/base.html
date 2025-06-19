@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vite + React + TS</title>
+        <link rel="stylesheet" crossorigin="" href="{% static 'css/index-NOR1MbJ3.css' %}">
+    </head>
+    <body>
+        <div id="root">
+            <div class="min-h-screen bg-gray-50">
+                {% include 'components/navbar.html' %}
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+        <div class="ue-sidebar-container">
+            <iframe srcdoc="<!DOCTYPE html><html><head></head><body><div class=&quot;frame-root&quot;></div></body></html>"></iframe>
+        </div>
+    </body>
+</html>
