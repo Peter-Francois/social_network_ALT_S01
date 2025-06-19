@@ -4,9 +4,9 @@ from api.v1.shared_resources.models import SharedResource
 
 class ResourceAccess(models.Model):
     ACCESS_TYPE_CHOICES = [
-        ('read', 'Read'),
-        ('write', 'Write'),
-        ('owner', 'Owner'),
+        ('view', 'View'),
+        ('edit', 'Edit'),
+        ('admin', 'Admin'),
     ]
 
     access_type = models.CharField(max_length=20, choices=ACCESS_TYPE_CHOICES)

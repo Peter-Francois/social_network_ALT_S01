@@ -2,9 +2,16 @@ from django.db import models
 from api.v1.users.models import User
 
 class SharedResource(models.Model):
+    RESOURCE_TYPE_CHOICES = [
+        ('document', 'Document'),
+        ('image', 'Image'),
+        ('video', 'Video'),
+        ('presentation', 'Presentation'),
+    ]
+
     title = models.CharField(max_length=255)
     description = models.TextField(blank=True, null=True)
-    resource_type = models.CharField(max_length=50)
+    resource_type = models.CharField(max_length=20, choices=RESOURCE_TYPE_CHOICES)
     path = models.TextField()
     mime_type = models.CharField(max_length=100)
     size = models.PositiveIntegerField()

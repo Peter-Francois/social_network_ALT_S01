@@ -4,8 +4,8 @@ from api.v1.users.models import User
 
 class EventRSVP(models.Model):
     STATUS_CHOICES = [
-        ('going', 'Going'),
-        ('not_going', 'Not Going'),
+        ('attending', 'Attending'),
+        ('declined', 'Declined'),
         ('maybe', 'Maybe'),
     ]
 

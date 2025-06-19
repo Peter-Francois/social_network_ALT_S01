@@ -5,7 +5,7 @@ from api.v1.user_groups.models import UserGroup
 
 class Event(models.Model):
     LOCATION_TYPE_CHOICES = [
-        ('online', 'Online'),
+        ('virtual', 'Virtual'),
         ('physical', 'Physical'),
         ('hybrid', 'Hybrid'),
     ]

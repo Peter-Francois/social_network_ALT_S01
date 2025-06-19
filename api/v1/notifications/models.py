@@ -4,15 +4,11 @@ from api.v1.users.models import User
 
 class Notification(models.Model):
     NOTIFICATION_TYPES = [
-        ('message', 'Message'),
-        ('friend_request', 'Friend Request'),
-        ('event_invite', 'Event Invite'),
-        ('group_invite', 'Group Invite'),
-        ('comment', 'Comment'),
-        ('like', 'Like'),
-        ('share', 'Share'),
-        ('mention', 'Mention'),
-        ('system', 'System'),
+        ('event_update', 'Event Update'),
+        ('event_reminder', 'Event Reminder'),
+        ('rsvp_update', 'RSVP Update'),
+        ('resource_shared', 'Resource Shared'),
+
     ]
 
     PRIORITY_LEVELS = [

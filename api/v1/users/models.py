@@ -1,8 +1,17 @@
 from django.db import models
+''' 
+AbstractBaseUser : gère le mot de passe, le hash, la connexion.
+BaseUserManager : gère la création des utilisateurs.
+PermissionsMixin : gère les permissions (admin, superuser, etc.).
+'''
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 
 # Gestionnaire personnalisé
 class CustomUserManager(BaseUserManager):
+    ''' 
+    **extra_fields : Paramètres supplémentaires (optionnels) passés au modèle utilisateur
+    Accepte n’importe quel nombre de paramètres nommés supplémentaires sous forme de dictionnaire.
+    '''
     def create_user(self, email, firstname, lastname, birthdate, password=None, **extra_fields):
         if not email:
             raise ValueError("L'adresse email est obligatoire")
