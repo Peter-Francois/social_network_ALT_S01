@@ -15,3 +15,6 @@ def manage_events_partial(request):
 
 def notifications_partial(request):
     return render(request, 'partials/notifications.html')
+
+def create_events_modal_partial(request):
+    return render(request, 'partials/create_events_modal.html')
